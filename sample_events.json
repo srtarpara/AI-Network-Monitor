@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-02T07:00:00Z",
+    "scan_window": "2026-04-01T00:00:00Z to 2026-04-02T00:00:00Z",
+    "subnet": "192.168.1.0/24",
+    "total_devices_seen": 9,
+    "total_events": 12
+  },
+  "devices": [
+    {
+      "mac": "a4:c3:f0:85:23:11",
+      "ip": "192.168.1.101",
+      "vendor": "Apple, Inc.",
+      "first_seen": "2026-03-15T09:12:44Z",
+      "last_seen": "2026-04-02T06:58:01Z",
+      "open_ports": [443]
+    },
+    {
+      "mac": "b8:27:eb:44:91:cc",
+      "ip": "192.168.1.102",
+      "vendor": "Raspberry Pi Foundation",
+      "first_seen": "2026-03-15T09:12:44Z",
+      "last_seen": "2026-04-02T06:58:01Z",
+      "open_ports": [22, 80, 5432]
+    },
+    {
+      "mac": "fc:65:de:22:08:77",
+      "ip": "192.168.1.103",
+      "vendor": "Roku, Inc.",
+      "first_seen": "2026-03-20T18:34:12Z",
+      "last_seen": "2026-04-02T06:57:55Z",
+      "open_ports": [80, 8060]
+    },
+    {
+      "mac": "d0:73:d5:01:b2:39",
+      "ip": "192.168.1.104",
+      "vendor": "Amazon Technologies Inc.",
+      "first_seen": "2026-03-15T09:12:44Z",
+      "last_seen": "2026-04-02T06:58:01Z",
+      "open_ports": [443]
+    },
+    {
+      "mac": "00:17:88:6b:4f:a2",
+      "ip": "192.168.1.105",
+      "vendor": "Philips Lighting BV",
+      "first_seen": "2026-03-28T20:11:03Z",
+      "last_seen": "2026-04-02T06:57:48Z",
+      "open_ports": [80, 443]
+    },
+    {
+      "mac": "34:02:86:ff:c1:55",
+      "ip": "192.168.1.110",
+      "vendor": "Samsung Electronics Co.",
+      "first_seen": "2026-04-01T22:47:09Z",
+      "last_seen": "2026-04-02T06:57:50Z",
+      "open_ports": [80, 443, 8443]
+    },
+    {
+      "mac": "dc:a6:32:9e:77:b1",
+      "ip": "192.168.1.150",
+      "vendor": "Unknown",
+      "first_seen": "2026-04-02T03:14:52Z",
+      "last_seen": "2026-04-02T03:44:18Z",
+      "open_ports": [22, 23, 8080]
+    },
+    {
+      "mac": "00:50:56:c0:00:08",
+      "ip": "192.168.1.200",
+      "vendor": "VMware, Inc.",
+      "first_seen": "2026-04-01T10:05:33Z",
+      "last_seen": "2026-04-02T06:55:12Z",
+      "open_ports": [22, 3389]
+    },
+    {
+      "mac": "e8:6f:38:2b:09:dc",
+      "ip": "192.168.1.1",
+      "vendor": "Netgear",
+      "first_seen": "2026-03-15T09:12:44Z",
+      "last_seen": "2026-04-02T06:58:01Z",
+      "open_ports": [80, 443, 53]
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "mac": "34:02:86:ff:c1:55",
+      "ip": "192.168.1.110",
+      "vendor": "Samsung Electronics Co.",
+      "event_type": "new_device",
+      "detail": "New device appeared on network: Samsung Electronics Co. at 192.168.1.110. Open ports: [80, 443, 8443]",
+      "severity": "warning",
+      "created_at": "2026-04-01T22:47:09Z"
+    },
+    {
+      "id": 2,
+      "mac": "dc:a6:32:9e:77:b1",
+      "ip": "192.168.1.150",
+      "vendor": "Unknown",
+      "event_type": "new_device",
+      "detail": "New device appeared on network: Unknown vendor at 192.168.1.150. Open ports: [22, 23, 8080]",
+      "severity": "critical",
+      "created_at": "2026-04-02T03:14:52Z"
+    },
+    {
+      "id": 3,
+      "mac": "dc:a6:32:9e:77:b1",
+      "ip": "192.168.1.150",
+      "vendor": "Unknown",
+      "event_type": "suspicious_port",
+      "detail": "Port 23 (Telnet) is open on an unknown device at 192.168.1.150. Telnet is unencrypted and commonly exploited.",
+      "severity": "critical",
+      "created_at": "2026-04-02T03:14:52Z"
+    },
+    {
+      "id": 4,
+      "mac": "dc:a6:32:9e:77:b1",
+      "ip": "192.168.1.150",
+      "vendor": "Unknown",
+      "event_type": "device_disappeared",
+      "detail": "Device 192.168.1.150 (Unknown) dropped off the network after 29 minutes. Last seen: 2026-04-02T03:44:18Z",
+      "severity": "warning",
+      "created_at": "2026-04-02T03:44:45Z"
+    },
+    {
+      "id": 5,
+      "mac": "fc:65:de:22:08:77",
+      "ip": "192.168.1.103",
+      "vendor": "Roku, Inc.",
+      "event_type": "high_dns_volume",
+      "detail": "Roku device at 192.168.1.103 made 312 DNS queries in a 6-hour window (11pm-5am). Normal baseline is ~40. 47 queries resolved to domains flagged on threat intel feeds.",
+      "severity": "warning",
+      "created_at": "2026-04-02T05:01:33Z"
+    },
+    {
+      "id": 6,
+      "mac": "fc:65:de:22:08:77",
+      "ip": "192.168.1.103",
+      "vendor": "Roku, Inc.",
+      "event_type": "suspicious_destination",
+      "detail": "Roku device at 192.168.1.103 made outbound connections to 185.220.101.45 (Romania) and 45.142.212.100 (Netherlands). Neither IP matches known Roku CDN ranges.",
+      "severity": "warning",
+      "created_at": "2026-04-02T05:01:33Z"
+    },
+    {
+      "id": 7,
+      "mac": "00:17:88:6b:4f:a2",
+      "ip": "192.168.1.105",
+      "vendor": "Philips Lighting BV",
+      "event_type": "port_change",
+      "detail": "Philips Hue hub at 192.168.1.105 now has port 443 open. Previously only port 80 was observed. Could indicate a firmware update.",
+      "severity": "info",
+      "created_at": "2026-04-01T21:15:07Z"
+    },
+    {
+      "id": 8,
+      "mac": "00:50:56:c0:00:08",
+      "ip": "192.168.1.200",
+      "vendor": "VMware, Inc.",
+      "event_type": "suspicious_port",
+      "detail": "Port 3389 (RDP) is open on VMware device at 192.168.1.200. RDP exposed on a local VM is a common lateral movement target.",
+      "severity": "warning",
+      "created_at": "2026-04-01T10:05:33Z"
+    },
+    {
+      "id": 9,
+      "mac": "b8:27:eb:44:91:cc",
+      "ip": "192.168.1.102",
+      "vendor": "Raspberry Pi Foundation",
+      "event_type": "info",
+      "detail": "Scanner host (Raspberry Pi at 192.168.1.102) confirmed active. PostgreSQL port 5432 open locally.",
+      "severity": "info",
+      "created_at": "2026-04-02T07:00:00Z"
+    },
+    {
+      "id": 10,
+      "mac": "a4:c3:f0:85:23:11",
+      "ip": "192.168.1.101",
+      "vendor": "Apple, Inc.",
+      "event_type": "ip_change",
+      "detail": "Apple device (MAC a4:c3:f0:85:23:11) changed IP from 192.168.1.108 to 192.168.1.101 between scans. Likely DHCP lease renewal.",
+      "severity": "info",
+      "created_at": "2026-04-01T14:32:19Z"
+    },
+    {
+      "id": 11,
+      "mac": "d0:73:d5:01:b2:39",
+      "ip": "192.168.1.104",
+      "vendor": "Amazon Technologies Inc.",
+      "event_type": "high_bandwidth",
+      "detail": "Amazon Echo at 192.168.1.104 transmitted unusually high outbound traffic (estimated 340MB) between 2am-4am. Normal overnight baseline is under 5MB.",
+      "severity": "warning",
+      "created_at": "2026-04-02T04:00:11Z"
+    },
+    {
+      "id": 12,
+      "mac": "e8:6f:38:2b:09:dc",
+      "ip": "192.168.1.1",
+      "vendor": "Netgear",
+      "event_type": "info",
+      "detail": "Router at 192.168.1.1 (Netgear) confirmed active. Admin ports 80 and 443 open as expected.",
+      "severity": "info",
+      "created_at": "2026-04-02T07:00:00Z"
+    }
+  ]
+}
